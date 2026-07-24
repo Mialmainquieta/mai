@@ -1,4 +1,4 @@
-console.log("🚀 MAI Framework v2");
+console.log("🚀 MAI Framework v1.0");
 
 document.addEventListener("DOMContentLoaded", function () {
 
