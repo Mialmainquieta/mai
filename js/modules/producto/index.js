@@ -1,8 +1,8 @@
 // ======================================
 // MAI Framework
 // Módulo Producto
-// Transferencia
-// Versión 0.1.0
+// Tarjeta Transferencia
+// Versión 0.2.0
 // ======================================
 
 MAI.modules.producto = {
@@ -19,91 +19,103 @@ MAI.modules.producto = {
 
         if (!box) return;
 
-        const descuento = parseFloat(box.dataset.discount);
+        const descuento = Number(box.dataset.discount);
 
-        const finalPriceElement = box.querySelector(".final-price");
+        const finalPrice = box.querySelector(".final-price");
 
-        if (!finalPriceElement) return;
-
-        const textoPrecio = finalPriceElement.textContent.trim();
+        if (!finalPrice) return;
 
         const precioFinal = parseFloat(
-            textoPrecio
-                .replace(/\$/g, "")
-                .replace(/\./g, "")
+
+            finalPrice.textContent
+
+                .replace("$","")
+
+                .replace(/\./g,"")
+
                 .replace(",", ".")
+
         );
 
-        if (isNaN(precioFinal)) return;
+        if(isNaN(precioFinal)) return;
 
-        const precioLista = precioFinal / (1 - (descuento / 100));
+        const precioLista = precioFinal / (1 - (descuento/100));
 
         const ahorro = precioLista - precioFinal;
 
-        const formato = valor =>
-            valor.toLocaleString("es-AR", {
-                style: "currency",
-                currency: "ARS",
-                minimumFractionDigits: 2
+        const dinero = valor =>
+
+            valor.toLocaleString("es-AR",{
+
+                style:"currency",
+
+                currency:"ARS",
+
+                minimumFractionDigits:2
+
             });
 
-        box.innerHTML = "";
+        box.innerHTML = `
 
-        //--------------------------------------------------
-        // Título
-        //--------------------------------------------------
+            <div class="mai-transfer-card">
 
-        const titulo = document.createElement("div");
-        titulo.className = "mai-transfer-title";
+                <div class="mai-transfer-header">
 
-        titulo.innerHTML = `
-            Ahorrá un <strong>${descuento}%</strong> pagando con
-            <strong>transferencia o efectivo</strong>
+                    <div>
+
+                        <div class="mai-transfer-title">
+
+                            Ahorrá un
+
+                        </div>
+
+                        <div class="mai-transfer-subtitle">
+
+                            pagando con transferencia bancaria o efectivo
+
+                        </div>
+
+                    </div>
+
+                    <div class="mai-transfer-percent">
+
+                        ${descuento}%
+
+                    </div>
+
+                </div>
+
+                <div class="mai-separator"></div>
+
+                <div class="mai-label">
+
+                    Precio Final
+
+                </div>
+
+                <div class="mai-price">
+
+                    ${dinero(precioFinal)}
+
+                </div>
+
+                <div class="mai-separator"></div>
+
+                <div class="mai-label">
+
+                    Hoy ahorrás
+
+                </div>
+
+                <div class="mai-saving">
+
+                    ${dinero(ahorro)}
+
+                </div>
+
+            </div>
+
         `;
-
-        //--------------------------------------------------
-
-        const hr1 = document.createElement("div");
-        hr1.className = "mai-divider";
-
-        //--------------------------------------------------
-
-        const lblFinal = document.createElement("div");
-        lblFinal.className = "mai-final-label";
-        lblFinal.textContent = "Precio Final";
-
-        //--------------------------------------------------
-
-        const precio = document.createElement("div");
-        precio.className = "mai-final-price";
-        precio.textContent = formato(precioFinal);
-
-        //--------------------------------------------------
-
-        const hr2 = document.createElement("div");
-        hr2.className = "mai-divider";
-
-        //--------------------------------------------------
-
-        const lblAhorro = document.createElement("div");
-        lblAhorro.className = "mai-saving-label";
-        lblAhorro.textContent = "Tu ahorro es de";
-
-        //--------------------------------------------------
-
-        const ahorroFinal = document.createElement("div");
-        ahorroFinal.className = "mai-saving-price";
-        ahorroFinal.textContent = formato(ahorro);
-
-        //--------------------------------------------------
-
-        box.appendChild(titulo);
-        box.appendChild(hr1);
-        box.appendChild(lblFinal);
-        box.appendChild(precio);
-        box.appendChild(hr2);
-        box.appendChild(lblAhorro);
-        box.appendChild(ahorroFinal);
 
     }
 
