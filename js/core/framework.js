@@ -13,7 +13,6 @@ MAI.init = function () {
     }
 
     // Información del Framework
-    MAI.logger.info(">>> FRAMEWORK NUEVO CARGADO <<<");
     MAI.logger.info(`${MAI.config.framework.name} v${MAI.config.framework.version}`);
 
     // Verificación de servicios
