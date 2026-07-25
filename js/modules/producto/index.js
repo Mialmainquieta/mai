@@ -2,7 +2,7 @@
 // MAI Framework
 // Módulo Producto
 // Tarjeta Transferencia
-// Versión 0.2.0
+// Versión 0.3.0
 // ======================================
 
 MAI.modules.producto = {
@@ -28,30 +28,27 @@ MAI.modules.producto = {
         const precioFinal = parseFloat(
 
             finalPrice.textContent
-
-                .replace("$","")
-
-                .replace(/\./g,"")
-
+                .replace(/\$/g, "")
+                .replace(/\./g, "")
                 .replace(",", ".")
 
         );
 
-        if(isNaN(precioFinal)) return;
+        if (isNaN(precioFinal)) return;
 
-        const precioLista = precioFinal / (1 - (descuento/100));
+        const precioLista = precioFinal / (1 - (descuento / 100));
 
         const ahorro = precioLista - precioFinal;
 
         const dinero = valor =>
 
-            valor.toLocaleString("es-AR",{
+            valor.toLocaleString("es-AR", {
 
-                style:"currency",
+                style: "currency",
 
-                currency:"ARS",
+                currency: "ARS",
 
-                minimumFractionDigits:2
+                minimumFractionDigits: 2
 
             });
 
@@ -61,25 +58,15 @@ MAI.modules.producto = {
 
                 <div class="mai-transfer-header">
 
-                    <div>
+                    <div class="mai-transfer-title">
 
-                        <div class="mai-transfer-title">
-
-                            Ahorrá un
-
-                        </div>
-
-                        <div class="mai-transfer-subtitle">
-
-                            pagando con transferencia bancaria o efectivo
-
-                        </div>
+                        Ahorrá un <strong>${descuento}%</strong>
 
                     </div>
 
-                    <div class="mai-transfer-percent">
+                    <div class="mai-transfer-subtitle">
 
-                        ${descuento}%
+                        pagando con transferencia bancaria o efectivo
 
                     </div>
 

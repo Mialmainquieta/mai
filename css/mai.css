@@ -1,14 +1,15 @@
-/*========================================================
+/*======================================================
 
-MAI FRAMEWORK
-PRODUCTO
-TRANSFERENCIA V2
+MAI Framework
+Transferencia V3
 
-========================================================*/
+======================================================*/
 
 .product-vip__show-payment-offers-discount{
 
     padding:0 !important;
+
+    margin:0;
 
     background:transparent !important;
 
@@ -16,23 +17,25 @@ TRANSFERENCIA V2
 
 }
 
-/*************************************************/
+/****************************************************/
 
 .mai-transfer-card{
 
-    background:#F6FCF8;
+    position:relative;
 
-    border:1px solid #CFE4D5;
+    background:#F5FBF6;
+
+    border:1px solid #C9E7D1;
 
     border-radius:12px;
 
-    padding:22px 22px 20px 26px;
+    padding:22px 22px 22px 28px;
 
-    position:relative;
+    overflow:hidden;
 
 }
 
-/*************************************************/
+/****************************************************/
 
 .mai-transfer-card::before{
 
@@ -48,75 +51,61 @@ TRANSFERENCIA V2
 
     width:3px;
 
-    background:#7BBE8D;
+    background:#7CBF8D;
 
-    border-radius:10px;
+    border-radius:5px;
 
 }
 
-/*************************************************/
+/****************************************************/
 
 .mai-transfer-header{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:flex-start;
-
-    gap:20px;
 
     margin-bottom:18px;
 
 }
 
-/*************************************************/
+/****************************************************/
 
 .mai-transfer-title{
+
+    color:#16643F;
+
+    font-size:18px;
+
+    font-weight:500;
+
+    line-height:1.35;
+
+}
+
+.mai-transfer-title strong{
 
     font-size:34px;
 
     font-weight:700;
 
-    color:#16643F;
-
-    line-height:1;
-
 }
 
-/*************************************************/
+/****************************************************/
 
 .mai-transfer-subtitle{
 
-    margin-top:8px;
+    margin-top:4px;
+
+    color:#345A43;
 
     font-size:15px;
 
     line-height:1.45;
 
-    color:#345A43;
-
 }
 
-/*************************************************/
-
-.mai-transfer-percent{
-
-    font-size:58px;
-
-    font-weight:700;
-
-    color:#16643F;
-
-    line-height:0.9;
-
-    white-space:nowrap;
-
-}
-
-/*************************************************/
+/****************************************************/
 
 .mai-separator{
+
+    width:100%;
 
     height:1px;
 
@@ -126,43 +115,45 @@ TRANSFERENCIA V2
 
 }
 
-/*************************************************/
+/****************************************************/
 
 .mai-label{
 
+    color:#777;
+
     font-size:15px;
 
-    color:#666;
+    font-weight:400;
 
 }
 
-/*************************************************/
+/****************************************************/
 
 .mai-price{
 
     margin-top:4px;
 
-    font-size:40px;
+    color:#16643F;
+
+    font-size:38px;
 
     font-weight:700;
 
-    color:#16643F;
-
-    line-height:1.1;
+    line-height:1.05;
 
 }
 
-/*************************************************/
+/****************************************************/
 
 .mai-saving{
 
     margin-top:4px;
 
+    color:#16643F;
+
     font-size:28px;
 
     font-weight:600;
-
-    color:#16643F;
 
     line-height:1.1;
 
