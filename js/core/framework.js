@@ -23,3 +23,6 @@ MAI.init = function () {
     MAI.logger.info("Framework iniciado correctamente.");
 
 };
+MAI.logger.info("Framework iniciado correctamente.");
+
+MAI.modules.producto.init();

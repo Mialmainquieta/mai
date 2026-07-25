@@ -1,0 +1,87 @@
+/*==================================================
+TRANSFERENCIA
+==================================================*/
+
+.product-vip__show-payment-offers-discount{
+
+    background:#EEF9F0 !important;
+
+    border:1px solid #CFE6D2 !important;
+
+    border-radius:12px;
+
+    padding:18px !important;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.mai-transfer-title{
+
+    color:#166534;
+
+    font-size:18px;
+
+    line-height:1.45;
+
+    font-weight:500;
+
+}
+
+.mai-transfer-title strong{
+
+    font-weight:700;
+
+}
+
+.mai-divider{
+
+    width:100%;
+
+    height:1px;
+
+    background:#D6E7D8;
+
+}
+
+.mai-final-label{
+
+    font-size:15px;
+
+    color:#666;
+
+}
+
+.mai-final-price{
+
+    color:#166534;
+
+    font-size:42px;
+
+    font-weight:700;
+
+    line-height:1;
+
+}
+
+.mai-saving-label{
+
+    color:#666;
+
+    font-size:15px;
+
+}
+
+.mai-saving-price{
+
+    color:#166534;
+
+    font-size:26px;
+
+    font-weight:600;
+
+}
