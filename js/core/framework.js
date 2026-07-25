@@ -6,23 +6,27 @@
 
 MAI.init = function () {
 
-    // Verificar dependencias básicas
+    // Verificar dependencias
     if (!MAI.logger || !MAI.config) {
-        console.error("MAI Framework: No se pudieron cargar los servicios básicos.");
+        console.error("No se pudieron cargar los servicios básicos.");
         return;
     }
 
-    // Información del Framework
     MAI.logger.info(`${MAI.config.framework.name} v${MAI.config.framework.version}`);
 
-    // Verificación de servicios
     MAI.logger.info("Logger ............. OK");
     MAI.logger.info("Config ............. OK");
 
-    // Framework listo
+    // ==========================
+    // Inicializar módulos
+    // ==========================
+
+    if (MAI.modules.producto) {
+
+        MAI.modules.producto.init();
+
+    }
+
     MAI.logger.info("Framework iniciado correctamente.");
 
 };
-MAI.logger.info("Framework iniciado correctamente.");
-
-MAI.modules.producto.init();
