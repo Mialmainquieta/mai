@@ -2,7 +2,7 @@
 // MAI Framework
 // Módulo Producto
 // Tarjeta Transferencia
-// Versión 0.3.0
+// Versión 0.4.0
 // ======================================
 
 MAI.modules.producto = {
@@ -19,90 +19,99 @@ MAI.modules.producto = {
 
         if (!box) return;
 
-        const descuento = Number(box.dataset.discount);
+        if (box.querySelector(".mai-transfer-card")) return;
 
-        const finalPrice = box.querySelector(".final-price");
+        const descuento = this.#obtenerDescuento(box);
 
-        if (!finalPrice) return;
+        if (descuento <= 0) return;
 
-        const precioFinal = parseFloat(
+        const precioFinal = this.#obtenerPrecioFinal();
 
-            finalPrice.textContent
+        if (isNaN(precioFinal) || precioFinal <= 0) return;
+
+        const precioLista = precioFinal / (1 - (descuento / 100));
+        const ahorro = precioLista - precioFinal;
+
+        const card = this.#crearTarjeta({
+            descuento,
+            precioFinal,
+            ahorro
+        });
+
+        box.insertAdjacentElement("afterend", card);
+
+    },
+
+    #obtenerDescuento(box) {
+
+        return Number(box.dataset.discount || 0);
+
+    },
+
+    #obtenerPrecioFinal() {
+
+        const priceElement = document.querySelector(".product-vip__price-value");
+
+        if (!priceElement) return NaN;
+
+        return parseFloat(
+            priceElement.textContent
                 .replace(/\$/g, "")
                 .replace(/\./g, "")
                 .replace(",", ".")
-
+                .trim()
         );
 
-        if (isNaN(precioFinal)) return;
+    },
 
-        const precioLista = precioFinal / (1 - (descuento / 100));
+    #crearTarjeta({ descuento, precioFinal, ahorro }) {
 
-        const ahorro = precioLista - precioFinal;
+        const card = document.createElement("div");
 
-        const dinero = valor =>
+        card.className = "mai-transfer-card";
 
-            valor.toLocaleString("es-AR", {
-
-                style: "currency",
-
-                currency: "ARS",
-
-                minimumFractionDigits: 2
-
-            });
-
-        box.innerHTML = `
-
-            <div class="mai-transfer-card">
-
-                <div class="mai-transfer-header">
-
-                    <div class="mai-transfer-title">
-
-                        Ahorrá un <strong>${descuento}%</strong>
-
-                    </div>
-
-                    <div class="mai-transfer-subtitle">
-
-                        pagando con transferencia bancaria o efectivo
-
-                    </div>
-
+        card.innerHTML = `
+            <div class="mai-transfer-header">
+                <div class="mai-transfer-title">
+                    Ahorrá un <strong>${descuento}%</strong>
                 </div>
-
-                <div class="mai-separator"></div>
-
-                <div class="mai-label">
-
-                    Precio Final
-
+                <div class="mai-transfer-subtitle">
+                    pagando con transferencia bancaria o efectivo
                 </div>
-
-                <div class="mai-price">
-
-                    ${dinero(precioFinal)}
-
-                </div>
-
-                <div class="mai-separator"></div>
-
-                <div class="mai-label">
-
-                    Hoy ahorrás
-
-                </div>
-
-                <div class="mai-saving">
-
-                    ${dinero(ahorro)}
-
-                </div>
-
             </div>
 
+            <div class="mai-separator"></div>
+
+            <div class="mai-label">
+                Precio Final
+            </div>
+
+            <div class="mai-price">
+                ${this.#formatearDinero(precioFinal)}
+            </div>
+
+            <div class="mai-separator"></div>
+
+            <div class="mai-label">
+                Hoy ahorrás
+            </div>
+
+            <div class="mai-saving">
+                ${this.#formatearDinero(ahorro)}
+            </div>
         `;
+
+        return card;
+
+    },
+
+    #formatearDinero(valor) {
+
+        return valor.toLocaleString("es-AR", {
+            style: "currency",
+            currency: "ARS",
+            minimumFractionDigits: 2
+        });
 
     }
 
