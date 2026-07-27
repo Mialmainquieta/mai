@@ -1,94 +1,546 @@
-/*======================================================
-
-MAI Framework
-Transferencia V3.2
-Solo mejoras visuales
-
-======================================================*/
-
-/*------------------------------------------------------
-Breadcrumb
-------------------------------------------------------*/
-
-.product-vip__breadcrumb .breadcrumb__link{
-    color:#6F6F6F !important;
+.header-announcement__link {
+    color: #c8ff24 !important;
 }
 
-.product-vip__breadcrumb .breadcrumb__item{
-    color:#9A9A9A !important;
+/* Color y negrita para transferencia en TODA la tienda (Portada y Carrito) */
+.block-products-feed__product-tranfer-discount.text--primary,
+.cart-item-subtotal-transfer,
+.cart-total-transfer,
+.p-transfer-price,
+[class*="tranfer-discount"],
+[class*="price-transfer"] {
+    color: #28a745 !important;
+    font-weight: 800 !important;
+    opacity: 1 !important;
+    display: block !important;
+}
+/* Cambiar el precio con descuento a verde */
+.product-vip-price-container .product-vip-price-transfer,
+.product-vip-price-container span[style*="color"],
+.product-vip-price-container .payment-method-price {
+    color: #28a745 !important;
+    font-weight: bold !important;
 }
 
-/*------------------------------------------------------
-Contenedor Empretienda
-------------------------------------------------------*/
+/* Forzar el color de fondo de la barra de anuncios */
+.header-announcement.background--primary 
+{
+    background-color: #4A3C31 !important; /* Cambia este código por el color oscuro que prefieras */
+}
 
-.product-vip__show-payment-offers-discount{
+/* Forzar el color blanco del texto en la barra de anuncios */
+.header-announcement__text.contrast_text--primary 
+{
+    color: #FFFFFF !important;
+}
 
-    padding:0 !important;
+/* Alinea el banner a la izquierda en vez de centrado */
+.header-logo.header__left {
+  justify-content: flex-start !important;
+}
 
+/* Agranda la imagen del logo */
+.header-logo__image {
+  height: 200px !important;
+  width: auto !important;
+  max-width: none !important;
+  object-fit: contain !important;
+}
+
+/* Versión mobile: que no rompa el header en celular */
+@media (max-width: 768px) {
+  .header-logo__image {
+    height: 60px !important;
+    width: auto !important;
+  }
+}
+
+/* Reducir el tamaño máximo del combo de búsqueda */
+.header-search {
+    max-width: 350px; /* Cambia este número a 350px o 300px si lo querés aún más chico */
+    margin: 0 auto;   /* Lo mantiene centrado en su espacio */
+}
+
+/* Corregir el tamaño y proporción del banner del logo */
+.header-logo.header__left {
+    height: auto !important;       /* Deja que el contenedor se adapte a la imagen */
+    min-height: auto !important;
+    text-align: left;              /* Mantiene el logo alineado a la izquierda */
+}
+
+/* Forzar a la imagen a mantener su proporción real y achicarla */
+.header-logo.header__left img {
+    max-height: 90px !important;   /* Controla la altura real de la imagen (ajustá este número si lo querés más chico) */
+    width: auto !important;        /* Obliga a mantener la proporción original del ancho */
+    object-fit: contain !important;
+}
+
+/* Opcional: Alinear verticalmente el buscador con el nuevo tamaño del logo */
+.header-search.header__right {
+    display: flex !important;
+    align-items: center !important;
+}
+
+
+/* Imagen del logo */
+.header-logo img{
+    display:block;
     margin:0;
+}
 
-    background:transparent !important;
+.header{
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 6px 0 4px 0 !important;
+}
 
-    border:none !important;
+.header-top{
+    padding: 0 !important;
+    min-height: 24px !important;
+    height: 24px !important;
+    display: flex;
+    align-items: center;
+}
+
+.header-top__user-list{
+    margin: 0 !important;
+    min-height: 24px !important;
+}
+
+.header-top__user-list .user-list__link{
+    padding: 2px 8px !important;
+    line-height: 20px !important;
+}
+
+.user-list__link{
+    font-size: 11px !important;
+}
+
+/* Reducir altura menú marrón Mi Alma Inquieta */
+.header-menu {
+    padding: 0 !important;
+    min-height: 0 !important;
+}
+
+.header-menu__desktop {
+    height: 35px !important;
+    min-height: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.header-menu__desktop-list {
+    height: 35px !important;
+    min-height: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.header-menu .desktop-list__item {
+    height: 35px !important;
+    min-height: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.header-menu .desktop-list__link {
+    height: auto !important;
+    min-height: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+/*pone lineas verticales entre las opciones de menu*/
+.header-menu .desktop-list__item {
+    border-right: 1px solid rgba(230,210,180,0.35) !important;
+}
+
+.header-menu .desktop-list__item:last-child {
+    border-right: none !important;
+}
+/* cambio la forma que aparece "todos los prodcutos"*/
+h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 45px 0 35px !important;
+
+    color: #C2A04C !important;
+    font-size: 30px;
+    font-weight: bold !important;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 2px rgba(0,0,0,.12);
+}
+
+h2::before,
+h2::after{
+    content:"";
+    flex:1;
+    max-width:140px;
+    height:1px;
+    background:#d8c7ae;
+}
+
+/* ===================================
+   BANDA BENEFICIOS MI ALMA INQUIETA
+=================================== */
+.mai-beneficios{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+
+    width:100%;
+    box-sizing:border-box;
+
+    margin:5px 0 !important;
+    padding:8px 0 !important;
+
+    border-top:1px solid #EFEAE3;
+    border-bottom:1px solid #EFEAE3;
 
 }
 
-/****************************************************/
 
-.mai-transfer-card{
+.mai-beneficio{
+
+    flex:1;
+
+    min-width:220px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:10px;
 
     position:relative;
 
-    background:#F5FBF6;
-
-    border:1px solid #C9E7D1;
-
-    border-radius:12px;
-
-    padding:22px 22px 22px 28px;
-
-    overflow:hidden;
+    transition:.25s;
 
 }
 
-/****************************************************/
 
-.mai-transfer-card::before{
+.mai-beneficio:not(:last-child)::after{
 
     content:"";
 
     position:absolute;
 
-    left:14px;
+    right:0;
 
-    top:18px;
+    top:50%;
 
-    bottom:18px;
+    transform:translateY(-50%);
 
-    width:3px;
+    width:1px;
 
-    background:#7CBF8D;
+    height:28px;
 
-    border-radius:5px;
-
-}
-
-/****************************************************/
-
-.mai-transfer-header{
-
-    margin-bottom:18px;
+    background:#ECE7DF;
 
 }
 
-/****************************************************/
 
-.mai-transfer-title{
+.mai-icono{
 
-    color:#16643F;
+    width:34px;
 
-    font-size:20px;
+    height:34px;
+
+    border-radius:50%;
+
+    background:#FAF9F7;
+
+    border:1px solid #ECE7DF;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:17px;
+
+}
+
+
+.mai-texto{
+
+    color:#5C4335;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    letter-spacing:.2px;
+
+}
+
+
+.mai-beneficio:hover{
+
+    transform:translateY(-2px);
+
+}
+
+
+@media(max-width:768px){
+
+    .mai-beneficios{
+
+        display:grid;
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:12px;
+
+    }
+
+
+    .mai-beneficio{
+
+        min-width:auto;
+
+        justify-content:flex-start;
+
+    }
+
+
+    .mai-beneficio::after{
+
+        display:none;
+
+    }
+
+}
+
+/* ==========================================
+   OPTIMIZACIÓN MOBILE - HEADER
+========================================== */
+
+@media (max-width:768px){
+
+    /* Barra superior */
+    .header-top{
+        min-height:20px !important;
+        height:20px !important;
+    }
+
+    .user-list__link{
+        font-size:10px !important;
+    }
+
+    /* Logo */
+    .header-logo img{
+        max-height:55px !important;
+    }
+
+    /* Header */
+    .header{
+        padding:3px 0 !important;
+    }
+
+    /* Buscador */
+    .header-search{
+        margin-top:6px !important;
+        margin-bottom:6px !important;
+    }
+
+    .header-search input{
+        height:38px !important;
+        font-size:14px;
+    }
+
+    .header-search button{
+        height:38px !important;
+        width:48px !important;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .header-menu__desktop{
+        display:none !important;
+    }
+
+    .header-menu__mobile{
+        display:flex !important;
+    }
+
+}
+
+/* =====================================================
+   MOBILE V2 - HEADER COMPACTO
+===================================================== */
+
+@media (max-width:768px){
+
+    /* Header principal */
+    .header{
+        padding:2px 0 !important;
+    }
+
+    /* Logo */
+    .header-logo img{
+        max-height:48px !important;
+    }
+
+    /* Buscador */
+    .header-search{
+        margin:4px 0 !important;
+    }
+
+    .header-search input{
+        height:36px !important;
+        font-size:14px !important;
+    }
+
+    .header-search button{
+        height:36px !important;
+        width:42px !important;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .header-menu__mobile{
+
+        min-height:40px !important;
+
+        height:40px !important;
+
+        padding:0 10px !important;
+
+        display:flex !important;
+
+        align-items:center !important;
+
+        justify-content:space-between !important;
+
+    }
+
+}
+
+/* ===========================
+   TARJETAS DE PRODUCTO
+=========================== */
+
+.block-products-feed__product-wrapper{
+
+    background:#fff;
+
+    border:1px solid #EEE7DF;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    transition:.25s ease;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.05);
+
+    height:100%;
+
+}
+
+/* =====================================================
+   MI ALMA INQUIETA
+   SISTEMA DE TARJETAS PREMIUM
+   Compatible con:
+   - Home
+   - Productos
+   - Categorías
+===================================================== */
+
+
+/* Espacio entre tarjetas */
+
+.block-products-feed__product,
+.products-feed__product{
+
+    padding:12px;
+
+}
+
+
+/* Tarjeta */
+
+.block-products-feed__product-wrapper,
+.products-feed__product-wrapper{
+
+    background:#FFFFFF;
+
+    border:1px solid #F2ECE5;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    height:100%;
+
+    transition:all .25s ease;
+
+}
+
+
+/* Hover (Desktop) */
+
+.block-products-feed__product-wrapper:hover,
+.products-feed__product-wrapper:hover{
+
+    box-shadow:0 8px 22px rgba(0,0,0,.08);
+
+    transform:translateY(-2px);
+
+}
+
+
+/* Imagen */
+
+.block-products-feed__product-media,
+.products-feed__product-media{
+
+    padding:8px 8px 0;
+
+}
+
+.block-products-feed__product-image,
+.products-feed__product-image{
+
+    display:block;
+
+    width:100%;
+
+    border-radius:10px;
+
+}
+
+
+/* Nombre */
+
+.block-products-feed__product-name,
+.products-feed__product-name{
+
+    margin:14px 14px 8px;
+
+    min-height:42px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    font-size:15px;
 
     font-weight:600;
 
@@ -96,84 +548,933 @@ Contenedor Empretienda
 
 }
 
-.mai-transfer-title strong{
+.block-products-feed__product-name a,
+.products-feed__product-name a{
 
-    font-size:24px;
+    color:#5A4638;
 
-    font-weight:700;
+    text-decoration:none;
 
 }
 
-/****************************************************/
 
-.mai-transfer-subtitle{
+/* Precio */
 
-    margin-top:4px;
+.block-products-feed__product-price,
+.products-feed__product-price{
 
-    color:#16643F;
+    margin:0;
 
-    font-size:20px;
+    text-align:center;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#4A392F;
+
+}
+
+
+/* Cuotas */
+
+.block-products-feed__product-additional,
+.products-feed__product-additional{
+
+    margin-top:6px;
+
+    text-align:center;
+
+    font-size:12px;
 
     font-weight:500;
+
+    color:#666666;
+
+    line-height:1.4;
+
+}
+
+
+/* Precio transferencia */
+
+.block-products-feed__product-tranfer-discount,
+.products-feed__product-tranfer-discount{
+
+    width:70%;
+
+    margin:14px auto 16px;
+
+    padding-top:10px;
+
+    border-top:1px solid #E9E3DC;
+
+    text-align:center;
+
+    font-size:14px;
+
+    color:#2E7D32;
 
     line-height:1.35;
 
 }
 
-/****************************************************/
+.block-products-feed__product-tranfer-discount strong,
+.products-feed__product-tranfer-discount strong{
 
-.mai-separator{
+    display:block;
 
-    width:100%;
+    margin-bottom:2px;
 
-    height:1px;
+    font-size:24px;
 
-    background:#D8E7DB;
+    font-weight:700;
 
-    margin:18px 0;
+    color:#2E7D32;
 
 }
 
-/****************************************************/
+/* ==================================================
+   MI ALMA INQUIETA
+   MENÚ PREMIUM V1
+================================================== */
 
-.mai-label{
 
-    color:#4F4F4F;
+/* El menú siempre por encima del contenido */
 
-    font-size:20px;
+.header-menu{
+
+    position:relative;
+
+    z-index:9999;
+
+}
+
+
+/* Dropdown */
+
+.header-menu .nav{
+
+    background:#FFFFFF !important;
+
+    border:1px solid #ECE5DD;
+
+    border-radius:12px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    padding:10px 0;
+
+    min-width:240px;
+
+}
+
+
+/* Primer nivel */
+
+.header-menu .nav.first{
+
+    margin-top:8px;
+
+}
+
+
+/* Items */
+
+.header-menu .desktop-list__subitem{
+
+    list-style:none;
+
+}
+
+
+/* Links */
+
+.header-menu .desktop-list__subitem>a{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:12px 22px;
+
+    font-size:14px;
 
     font-weight:500;
 
-}
+    color:#5A4638 !important;
 
-/****************************************************/
-
-.mai-price{
-
-    margin-top:8px;
-
-    color:#16643F;
-
-    font-size:46px;
-
-    font-weight:700;
-
-    line-height:1.05;
+    transition:all .25s ease;
 
 }
 
-/****************************************************/
 
-.mai-saving{
+/* Hover */
 
-    margin-top:8px;
+.header-menu .desktop-list__subitem>a:hover{
 
-    color:#16643F;
+    background:#FAF7F2;
+
+    color:#3D3028 !important;
+
+    padding-left:28px;
+
+}
+
+
+/* Línea dorada */
+
+.header-menu .desktop-list__subitem>a:hover{
+
+    border-left:3px solid #C2A04C;
+
+}
+
+
+/* Flechas */
+
+.header-menu .desktop-list__right-icon{
+
+    font-size:11px;
+
+    opacity:.55;
+
+}
+
+
+/* Espacio entre niveles */
+
+.header-menu .nav .nav{
+
+    margin-left:8px;
+
+}
+
+
+/* Último nivel */
+
+.header-menu .nav .nav .desktop-list__subitem>a{
+
+    font-size:13px;
+
+    color:#6D5B4F !important;
+
+}
+
+
+/* BANNER PREMIUM Transición */
+
+.header-menu .nav{
+
+    transition:all .25s ease;
+
+}
+
+.block-carrousel__slider{
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 12px 35px rgba(74,57,47,.10);
+}
+
+.block-carrousel__image{
+    display:block;
+}
+.block-carrousel__slider{
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 18px 45px rgba(74,57,47,.10);
+}
+.block-carrousel{
+    margin:10px auto 15px;
+}
+
+/* ===== Corrección menú hamburguesa móvil ===== */
+
+.mobile-menu-sidenav,
+.uk-offcanvas,
+.uk-offcanvas-bar {
+    z-index: 99999 !important;
+}
+
+.header-menu,
+.header-menu-mobile,
+.background--primary {
+    z-index: 1 !important;
+}
+/* ======================
+   Banner principal
+====================== */
+
+.hero-banner img{
+    border-radius:12px;
+}
+/*====================================================
+=      MI ALMA INQUIETA - PRODUCTO V1
+====================================================*/
+
+/* Caja derecha */
+
+.product-vip__right-container{
+
+    background:#fff;
+
+    border:1px solid #ece7df;
+
+    border-radius:16px;
+
+    padding:28px;
+
+    box-shadow:0 8px 30px rgba(0,0,0,.05);
+
+}
+
+/*-------------------------
+TITULO
+--------------------------*/
+
+.product-vip__title{
 
     font-size:34px;
 
+    line-height:1.2;
+
     font-weight:700;
 
-    line-height:1.1;
+    color:#3f352d;
+
+    margin-bottom:18px;
 
 }
+
+/*-------------------------
+PRECIO
+--------------------------*/
+
+.product-vip__price{
+
+    margin-bottom:18px;
+
+}
+
+.product-vip__price-value{
+
+    font-size:38px;
+
+    font-weight:700;
+
+    color:#3f352d;
+
+}
+
+/*-------------------------
+CAJAS PROMO
+--------------------------*/
+
+.product-vip__show-payment-offers-discount{
+
+    border:1px solid #d9d2c7 !important;
+
+    border-radius:12px 12px 0 0 !important;
+
+    padding:16px;
+
+    background:#faf8f5;
+
+}
+
+.product-vip__payment-offers-container{
+
+    border:1px solid #d9d2c7;
+
+    border-top:none;
+
+    border-radius:0 0 12px 12px !important;
+
+    margin-bottom:24px;
+
+}
+
+/*-------------------------
+LABELS
+--------------------------*/
+
+.field__label{
+
+    font-weight:600;
+
+    font-size:15px;
+
+    color:#4a4037;
+
+    margin-bottom:8px;
+
+}
+
+/*-------------------------
+SELECTS
+--------------------------*/
+
+.field__select,
+
+.field__input{
+
+    height:52px;
+
+    border-radius:10px !important;
+
+    border:1px solid #d9d2c7;
+
+    background:#fff;
+
+    font-size:15px;
+
+    transition:.25s;
+
+}
+
+.field__select:focus,
+
+.field__input:focus{
+
+    border-color:#c2a04c;
+
+    box-shadow:0 0 0 3px rgba(194,160,76,.15);
+
+}
+
+/*-------------------------
+BOTON
+--------------------------*/
+
+#add_to_cart-btn{
+
+    height:58px;
+
+    border-radius:12px !important;
+
+    background:#5c4634;
+
+    border:none;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+    transition:.30s;
+
+}
+
+#add_to_cart-btn:hover{
+
+    background:#c2a04c;
+
+    transform:translateY(-2px);
+
+}
+
+/*-------------------------
+ENVIO
+--------------------------*/
+
+.product-vip__shipment-cost-title{
+
+    margin-top:20px;
+
+    font-weight:600;
+
+    font-size:17px;
+
+}
+
+#shipment_cost-btn{
+
+    border-radius:10px !important;
+
+}
+
+/*-------------------------
+RESPONSIVE
+--------------------------*/
+
+@media(max-width:959px){
+
+.product-vip__right-container{
+
+    padding:20px;
+
+    border-radius:14px;
+
+}
+
+.product-vip__title{
+
+    font-size:28px;
+
+}
+
+.product-vip__price-value{
+
+    font-size:32px;
+
+}
+
+}
+
+/* ==========================================
+   Ficha de producto - Calculador de envío
+========================================== */
+
+#shipment_cost-form .field__input{
+    height:46px;
+    min-height:46px;
+    box-sizing:border-box;
+}
+
+#shipment_cost-btn{
+    height:46px;
+    min-height:46px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-sizing:border-box;
+}
+
+@media (max-width:959px){
+
+    .product-vip{
+        margin:20px 15px 45px !important;
+    }
+
+}
+/* ==========================================
+   PRODUCTO - Ajuste móvil de la caja derecha
+========================================== */
+
+@media (max-width:959px){
+
+    .product-vip__container{
+        padding:0 12px !important;
+        box-sizing:border-box;
+    }
+
+    .product-vip__right-container{
+        margin-top:20px !important;
+        padding:18px !important;
+    }
+
+}
+/* ==========================================
+   PRODUCTO - Corrección columna derecha móvil
+========================================== */
+
+@media (max-width:959px){
+
+    .product-vip__right-container.uk-grid-margin{
+
+        margin-left:12px !important;
+        margin-right:12px !important;
+
+        width:auto !important;
+        max-width:none !important;
+
+        padding:20px !important;
+        box-sizing:border-box;
+
+    }
+
+}
+
+/*=====================================================
+ MI ALMA INQUIETA
+ PRODUCTO V2
+ Corrección Responsive Mobile
+======================================================*/
+
+@media (max-width:959px){
+
+    /* El contenedor principal no debe tener desplazamientos */
+    .product-vip{
+        margin:20px auto 40px !important;
+        padding:0 !important;
+    }
+
+    /* Quitamos márgenes del grid de UIkit */
+    .product-vip__container{
+        margin:0 !important;
+        padding:0 !important;
+    }
+
+    /* Ambas columnas ocupan exactamente el mismo ancho */
+    .product-vip__left-container,
+    .product-vip__right-container{
+
+        width:calc(100% - 24px) !important;
+        max-width:calc(100% - 24px) !important;
+
+        margin-left:auto !important;
+        margin-right:auto !important;
+
+        float:none !important;
+
+    }
+
+    /* Separación entre foto y ficha */
+    .product-vip__right-container{
+
+        margin-top:22px !important;
+
+        padding:20px !important;
+
+        box-sizing:border-box;
+
+    }
+
+    /* El grid interno no debe empujar el contenido */
+    .product-vip__right-container>.uk-grid{
+
+        margin-left:0 !important;
+
+    }
+
+    .product-vip__right-container>.uk-grid>*{
+
+        padding-left:0 !important;
+
+    }
+
+}
+
+/* ==========================================
+   PRODUCTO V2
+   Corrección galería móvil
+========================================== */
+
+@media (max-width:959px){
+
+    .product-vip__left-container{
+
+        width:100% !important;
+
+        max-width:100% !important;
+
+        margin:0 !important;
+
+        padding:0 12px !important;
+
+        box-sizing:border-box;
+
+    }
+
+}
+
+/*======================================================
+MI ALMA INQUIETA V2
+FICHA DE PRODUCTO
+BLOQUE 01
+Versión 2.0
+======================================================*/
+
+
+/*======================================================
+BREADCRUMB
+======================================================*/
+
+.product-vip__breadcrumb{
+
+    margin-bottom:10px!important;
+
+    font-size:12px;
+
+    opacity:.75;
+
+}
+
+.product-vip__breadcrumb a{
+
+    color:#8A8A8A!important;
+
+    text-decoration:none;
+
+}
+
+.product-vip__breadcrumb li:not(:last-child)::after{
+
+    color:#C2A04C;
+
+}
+
+
+/*======================================================
+NOMBRE
+======================================================*/
+
+.product-vip__title{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:#5B4332;
+
+    line-height:1.20;
+
+    margin-bottom:18px!important;
+
+}
+
+
+/*======================================================
+PRECIO
+======================================================*/
+
+.product-vip__price::before{
+
+    display:block !important;
+
+    content:"Precio de lista:" !important;
+
+    font-size:14px;
+
+    color:#7B7B7B;
+
+    font-weight:500;
+
+    margin-right:18px !important;
+
+    margin-bottom:0 !important;
+
+}
+
+.product-vip__price-value{
+
+    display:block;
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:#3E3026;
+
+    line-height:1;
+
+}
+
+
+/*======================================================
+TRANSFERENCIA
+======================================================*/
+
+.product-vip__show-payment-offers-discount[data-discount]{
+
+    background:#E7F6EA;
+
+    border:1px solid #CBE2D0!important;
+
+    border-radius:12px 12px 0 0!important;
+
+    padding:14px 18px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
+
+}
+
+.product-vip__promo-transfer-value{
+
+    display:block;
+
+    color:#2F6B43;
+
+    font-size:15px;
+
+    margin-bottom:10px;
+
+    line-height:1.4;
+
+}
+
+.product-vip__promo-transfer-value strong{
+
+    font-size:18px;
+
+    color:#1D7A39;
+
+}
+
+
+/* Precio final */
+
+.product-vip__show-payment-offers-discount p{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin:0;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+.final-price{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:#1D7A39;
+
+}
+
+
+/*======================================================
+CUOTAS
+======================================================*/
+
+.product-vip__promo-installments{
+
+    padding:8px 18px;
+
+    font-size:15px;
+
+    background:#FFF;
+
+}
+
+.product-vip__promo-installments::after{
+
+    content:"sobre precio de lista";
+
+    display:block;
+
+    margin-top:2px;
+
+    font-size:11px;
+
+    color:#8A8A8A;
+
+}
+
+
+/*======================================================
+VER CUOTAS
+======================================================*/
+
+.product-vip__show-payment-offers-box{
+
+    padding:12px 18px;
+
+    transition:.30s;
+
+}
+
+.product-vip__show-payment-offers-box:hover{
+
+    background:#FAFAFA;
+
+}
+
+.product-vip__show-payment-offers-link{
+
+    font-weight:600;
+
+}
+
+.product-vip__show-payment-offers-icon{
+
+    color:#C2A04C;
+
+}
+
+
+/*======================================================
+FOTO PRINCIPAL
+======================================================*/
+
+.product__vip-images-grid-wrapper{
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+}
+
+.product-vip__images-grid-full-image{
+
+    display:block;
+
+    border-radius:16px;
+
+}
+
+
+/*======================================================
+RESPONSIVE
+======================================================*/
+
+@media(max-width:959px){
+
+.product-vip__title{
+
+    font-size:26px;
+
+}
+
+.product-vip__price{
+
+    gap:8px;
+
+}
+
+.product-vip__price::before{
+
+    font-size:14px;
+
+}
+
+.product-vip__price-value{
+
+    font-size:28px;
+
+}
+
+.product-vip__show-payment-offers-discount p{
+
+    flex-wrap:wrap;
+
+}
+
+.final-price{
+
+    font-size:28px;
+
+}
+
+}
+
+/*======================================================
+MAI
+AHORRO
+======================================================*/
+
+.mai-ahorro{
+
+    margin-top:10px;
+
+    padding-top:10px;
+
+    border-top:1px solid rgba(255,255,255,.35);
+
+    font-size:16px;
+
+    font-weight:600;
+
+}
+/* TEST GIT */
