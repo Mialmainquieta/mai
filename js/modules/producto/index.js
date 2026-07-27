@@ -2,7 +2,7 @@
 // MAI Framework
 // Módulo Producto
 // Tarjeta Transferencia
-// Versión 0.4.0
+// Versión 0.5.0
 // ======================================
 
 MAI.modules.producto = {
@@ -19,7 +19,7 @@ MAI.modules.producto = {
 
         if (!box) return;
 
-        if (box.querySelector(".mai-transfer-card")) return;
+        if (document.querySelector(".mai-transfer-card")) return;
 
         const descuento = this.#obtenerDescuento(box);
 
@@ -32,13 +32,13 @@ MAI.modules.producto = {
         const precioLista = precioFinal / (1 - (descuento / 100));
         const ahorro = precioLista - precioFinal;
 
-        const card = this.#crearTarjeta({
+        const tarjeta = this.#crearTarjeta({
             descuento,
             precioFinal,
             ahorro
         });
 
-        box.insertAdjacentElement("afterend", card);
+        box.insertAdjacentElement("afterend", tarjeta);
 
     },
 
@@ -50,16 +50,18 @@ MAI.modules.producto = {
 
     #obtenerPrecioFinal() {
 
-        const priceElement = document.querySelector(".product-vip__price-value");
+        const precio = document.querySelector(".product-vip__price-value");
 
-        if (!priceElement) return NaN;
+        if (!precio) return NaN;
 
         return parseFloat(
-            priceElement.textContent
+
+            precio.textContent
                 .replace(/\$/g, "")
                 .replace(/\./g, "")
                 .replace(",", ".")
                 .trim()
+
         );
 
     },
@@ -71,34 +73,51 @@ MAI.modules.producto = {
         card.className = "mai-transfer-card";
 
         card.innerHTML = `
+
             <div class="mai-transfer-header">
+
                 <div class="mai-transfer-title">
+
                     Ahorrá un <strong>${descuento}%</strong>
+
                 </div>
+
                 <div class="mai-transfer-subtitle">
+
                     pagando con transferencia bancaria o efectivo
+
                 </div>
+
             </div>
 
             <div class="mai-separator"></div>
 
             <div class="mai-label">
+
                 Precio Final
+
             </div>
 
             <div class="mai-price">
+
                 ${this.#formatearDinero(precioFinal)}
+
             </div>
 
             <div class="mai-separator"></div>
 
             <div class="mai-label">
+
                 Hoy ahorrás
+
             </div>
 
             <div class="mai-saving">
+
                 ${this.#formatearDinero(ahorro)}
+
             </div>
+
         `;
 
         return card;
@@ -108,9 +127,13 @@ MAI.modules.producto = {
     #formatearDinero(valor) {
 
         return valor.toLocaleString("es-AR", {
+
             style: "currency",
+
             currency: "ARS",
+
             minimumFractionDigits: 2
+
         });
 
     }
