@@ -1,9 +1,25 @@
 /*======================================================
 
 MAI Framework
-Transferencia V3
+Transferencia V3.1
 
 ======================================================*/
+
+/*------------------------------------------------------
+  Breadcrumb
+------------------------------------------------------*/
+
+.breadcrumb,
+.breadcrumb a,
+.breadcrumb span,
+.m-breadcrumb,
+.m-breadcrumb a{
+    color:#6F6F6F !important;
+}
+
+/*------------------------------------------------------
+  Contenedor Empretienda
+------------------------------------------------------*/
 
 .product-vip__show-payment-offers-discount{
 
@@ -71,9 +87,9 @@ Transferencia V3
 
     color:#16643F;
 
-    font-size:18px;
+    font-size:20px;
 
-    font-weight:500;
+    font-weight:600;
 
     line-height:1.35;
 
@@ -81,7 +97,7 @@ Transferencia V3
 
 .mai-transfer-title strong{
 
-    font-size:34px;
+    font-size:22px;
 
     font-weight:700;
 
@@ -93,11 +109,13 @@ Transferencia V3
 
     margin-top:4px;
 
-    color:#345A43;
+    color:#16643F;
 
-    font-size:15px;
+    font-size:20px;
 
-    line-height:1.45;
+    font-weight:500;
+
+    line-height:1.35;
 
 }
 
@@ -119,11 +137,11 @@ Transferencia V3
 
 .mai-label{
 
-    color:#777;
+    color:#666666;
 
-    font-size:15px;
+    font-size:20px;
 
-    font-weight:400;
+    font-weight:500;
 
 }
 
@@ -131,11 +149,11 @@ Transferencia V3
 
 .mai-price{
 
-    margin-top:4px;
+    margin-top:6px;
 
     color:#16643F;
 
-    font-size:38px;
+    font-size:44px;
 
     font-weight:700;
 
@@ -147,13 +165,13 @@ Transferencia V3
 
 .mai-saving{
 
-    margin-top:4px;
+    margin-top:6px;
 
     color:#16643F;
 
-    font-size:28px;
+    font-size:32px;
 
-    font-weight:600;
+    font-weight:700;
 
     line-height:1.1;
 
