@@ -2,7 +2,7 @@
 // MAI Framework
 // Módulo Producto
 // Tarjeta Transferencia
-// Versión 0.5.0
+// Versión 0.3.1
 // ======================================
 
 MAI.modules.producto = {
@@ -19,44 +19,17 @@ MAI.modules.producto = {
 
         if (!box) return;
 
-        if (document.querySelector(".mai-transfer-card")) return;
+        const descuento = Number(box.dataset.discount);
 
-        const descuento = this.#obtenerDescuento(box);
+        if (isNaN(descuento) || descuento <= 0) return;
 
-        if (descuento <= 0) return;
+        const finalPrice = box.querySelector(".final-price");
 
-        const precioFinal = this.#obtenerPrecioFinal();
+        if (!finalPrice) return;
 
-        if (isNaN(precioFinal) || precioFinal <= 0) return;
+        const precioFinal = parseFloat(
 
-        const precioLista = precioFinal / (1 - (descuento / 100));
-        const ahorro = precioLista - precioFinal;
-
-        const tarjeta = this.#crearTarjeta({
-            descuento,
-            precioFinal,
-            ahorro
-        });
-
-        box.insertAdjacentElement("afterend", tarjeta);
-
-    },
-
-    #obtenerDescuento(box) {
-
-        return Number(box.dataset.discount || 0);
-
-    },
-
-    #obtenerPrecioFinal() {
-
-        const precio = document.querySelector(".product-vip__price-value");
-
-        if (!precio) return NaN;
-
-        return parseFloat(
-
-            precio.textContent
+            finalPrice.textContent
                 .replace(/\$/g, "")
                 .replace(/\./g, "")
                 .replace(",", ".")
@@ -64,77 +37,75 @@ MAI.modules.producto = {
 
         );
 
-    },
+        if (isNaN(precioFinal)) return;
 
-    #crearTarjeta({ descuento, precioFinal, ahorro }) {
+        const precioLista = precioFinal / (1 - (descuento / 100));
 
-        const card = document.createElement("div");
+        const ahorro = precioLista - precioFinal;
 
-        card.className = "mai-transfer-card";
+        const dinero = (valor) =>
 
-        card.innerHTML = `
+            valor.toLocaleString("es-AR", {
 
-            <div class="mai-transfer-header">
+                style: "currency",
 
-                <div class="mai-transfer-title">
+                currency: "ARS",
 
-                    Ahorrá un <strong>${descuento}%</strong>
+                minimumFractionDigits: 2
+
+            });
+
+        box.innerHTML = `
+
+            <div class="mai-transfer-card">
+
+                <div class="mai-transfer-header">
+
+                    <div class="mai-transfer-title">
+
+                        Ahorrá un <strong>${descuento}%</strong>
+
+                    </div>
+
+                    <div class="mai-transfer-subtitle">
+
+                        pagando con transferencia bancaria o efectivo
+
+                    </div>
 
                 </div>
 
-                <div class="mai-transfer-subtitle">
+                <div class="mai-separator"></div>
 
-                    pagando con transferencia bancaria o efectivo
+                <div class="mai-label">
+
+                    Precio Final
 
                 </div>
 
-            </div>
+                <div class="mai-price">
 
-            <div class="mai-separator"></div>
+                    ${dinero(precioFinal)}
 
-            <div class="mai-label">
+                </div>
 
-                Precio Final
+                <div class="mai-separator"></div>
 
-            </div>
+                <div class="mai-label">
 
-            <div class="mai-price">
+                    Hoy ahorrás
 
-                ${this.#formatearDinero(precioFinal)}
+                </div>
 
-            </div>
+                <div class="mai-saving">
 
-            <div class="mai-separator"></div>
+                    ${dinero(ahorro)}
 
-            <div class="mai-label">
-
-                Hoy ahorrás
-
-            </div>
-
-            <div class="mai-saving">
-
-                ${this.#formatearDinero(ahorro)}
+                </div>
 
             </div>
 
         `;
-
-        return card;
-
-    },
-
-    #formatearDinero(valor) {
-
-        return valor.toLocaleString("es-AR", {
-
-            style: "currency",
-
-            currency: "ARS",
-
-            minimumFractionDigits: 2
-
-        });
 
     }
 
