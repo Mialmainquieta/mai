@@ -1,24 +1,25 @@
 /*======================================================
 
 MAI Framework
-Transferencia V3.1
+Transferencia V3.2
+Solo mejoras visuales
 
 ======================================================*/
 
 /*------------------------------------------------------
-  Breadcrumb
+Breadcrumb
 ------------------------------------------------------*/
 
-.breadcrumb,
-.breadcrumb a,
-.breadcrumb span,
-.m-breadcrumb,
-.m-breadcrumb a{
+.product-vip__breadcrumb .breadcrumb__link{
     color:#6F6F6F !important;
 }
 
+.product-vip__breadcrumb .breadcrumb__item{
+    color:#9A9A9A !important;
+}
+
 /*------------------------------------------------------
-  Contenedor Empretienda
+Contenedor Empretienda
 ------------------------------------------------------*/
 
 .product-vip__show-payment-offers-discount{
@@ -97,7 +98,7 @@ Transferencia V3.1
 
 .mai-transfer-title strong{
 
-    font-size:22px;
+    font-size:24px;
 
     font-weight:700;
 
@@ -137,7 +138,7 @@ Transferencia V3.1
 
 .mai-label{
 
-    color:#666666;
+    color:#4F4F4F;
 
     font-size:20px;
 
@@ -149,11 +150,11 @@ Transferencia V3.1
 
 .mai-price{
 
-    margin-top:6px;
+    margin-top:8px;
 
     color:#16643F;
 
-    font-size:44px;
+    font-size:46px;
 
     font-weight:700;
 
@@ -165,11 +166,11 @@ Transferencia V3.1
 
 .mai-saving{
 
-    margin-top:6px;
+    margin-top:8px;
 
     color:#16643F;
 
-    font-size:32px;
+    font-size:34px;
 
     font-weight:700;
 
