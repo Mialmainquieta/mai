@@ -9,11 +9,15 @@ MAI.modules.producto = {
 
     init() {
 
+        console.log("✅ MAI → producto.init()");
+
         this.transferencia();
 
     },
 
     transferencia() {
+
+        console.log("✅ MAI → transferencia()");
 
         const box = document.querySelector(".product-vip__show-payment-offers-discount");
 
