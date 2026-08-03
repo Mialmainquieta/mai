@@ -1477,4 +1477,190 @@ AHORRO
     font-weight:600;
 
 }
-/* TEST GIT */
+/*======================================================
+
+MAI Framework
+Transferencia V4
+Sprint UX-01 - Bloque 1
+
+======================================================*/
+
+.product-vip__show-payment-offers-discount{
+
+    margin:16px 0 14px;
+    padding:0;
+    background:transparent;
+    border:none !important;
+    box-shadow:none;
+
+}
+
+/*------------------------------------
+Tarjeta
+------------------------------------*/
+
+.mai-transfer-card{
+
+    background:#EEF8F0;
+    border:1px solid #C9E3CF;
+    border-radius:12px;
+
+    padding:18px;
+
+    box-shadow:
+        0 8px 24px rgba(0,0,0,.05);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+.mai-transfer-card:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 14px 34px rgba(0,0,0,.08);
+
+}
+
+/*------------------------------------
+Cabecera
+------------------------------------*/
+
+.mai-transfer-header{
+
+    margin-bottom:12px;
+
+}
+
+.mai-transfer-title{
+
+    font-size:22px;
+    font-weight:700;
+    color:#24543B;
+    line-height:1.2;
+
+}
+
+.mai-transfer-title strong{
+
+    color:#1C7C45;
+    font-size:26px;
+
+}
+
+.mai-transfer-subtitle{
+
+    margin-top:6px;
+
+    font-size:13px;
+
+    color:#5F6F65;
+
+    line-height:1.45;
+
+}
+
+/*------------------------------------
+Separador
+------------------------------------*/
+
+.mai-separator{
+
+    margin:14px 0;
+
+    border-top:1px dashed #C9DCCF;
+
+}
+
+/*------------------------------------
+Etiquetas
+------------------------------------*/
+
+.mai-label{
+
+    font-size:12px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.08em;
+
+    color:#7A857D;
+
+    margin-bottom:4px;
+
+}
+
+/*------------------------------------
+Precio transferencia
+------------------------------------*/
+
+.mai-price{
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:#1D5E3E;
+
+    line-height:1.1;
+
+    margin-bottom:6px;
+
+}
+
+/*------------------------------------
+Ahorro
+------------------------------------*/
+
+.mai-saving{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#B07B17;
+
+    line-height:1.1;
+
+}
+
+/*------------------------------------
+Responsive
+------------------------------------*/
+
+@media(max-width:640px){
+
+    .mai-transfer-card{
+
+        padding:16px;
+
+    }
+
+    .mai-transfer-title{
+
+        font-size:20px;
+
+    }
+
+    .mai-transfer-title strong{
+
+        font-size:24px;
+
+    }
+
+    .mai-price{
+
+        font-size:30px;
+
+    }
+
+    .mai-saving{
+
+        font-size:22px;
+
+    }
+
+}

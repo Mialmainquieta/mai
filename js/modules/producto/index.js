@@ -27,17 +27,23 @@ MAI.modules.producto = {
 
         if (isNaN(descuento) || descuento <= 0) return;
 
-        const finalPrice = box.querySelector(".final-price");
+        const finalPrice = document.querySelector(
+            ".product-vip__price-value"
+        );
 
         if (!finalPrice) return;
 
+        // Obtener únicamente el último precio mostrado
+        // (ignorando el precio tachado)
+
+        const textoPrecio = finalPrice.lastChild.textContent.trim();
+
         const precioFinal = parseFloat(
 
-            finalPrice.textContent
+            textoPrecio
                 .replace(/\$/g, "")
                 .replace(/\./g, "")
                 .replace(",", ".")
-                .trim()
 
         );
 
