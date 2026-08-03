@@ -1675,7 +1675,7 @@ Espaciado y Tipografía
 
 .footer__top{
 
-    padding:10px 0 !important;
+    padding:6px 0 !important;
 
 }
 
@@ -1902,5 +1902,10 @@ Sprint 3.1 - Compactar Footer Técnico
 .footer__top img{
 
     margin-bottom:4px !important;
+
+}
+.footer__bottom{
+
+    padding:4px 0 !important;
 
 }
