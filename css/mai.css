@@ -1664,3 +1664,77 @@ Responsive
     }
 
 }
+
+/*======================================================
+
+MAI Framework
+Footer Premium V1
+Espaciado y Tipografía
+
+======================================================*/
+
+.footer__top{
+
+    padding:60px 0 !important;
+
+}
+
+.footer__top__item{
+
+    margin-bottom:40px !important;
+
+}
+
+.footer__top__title{
+
+    margin-bottom:18px !important;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    letter-spacing:.12em;
+
+    text-transform:uppercase;
+
+    color:#F6F3EC;
+
+}
+
+.footer__top__icons{
+
+    gap:12px;
+
+}
+
+.footer__top__icon{
+
+    transition:.25s ease;
+
+}
+
+.footer__top__icon:hover{
+
+    transform:scale(1.08);
+
+}
+
+.footer__top__social-media-list{
+
+    gap:12px;
+
+}
+
+.footer__top__social-media-icon{
+
+    font-size:22px;
+
+    transition:.25s;
+
+}
+
+.footer__top__social-media-icon:hover{
+
+    transform:translateY(-2px);
+
+}
