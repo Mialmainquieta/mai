@@ -22,7 +22,7 @@ MAI.modules.producto = {
     observarPrecio() {
 
     const precio = document.querySelector(".product-vip__price-value");
-
+        console.log("Observando:", precio);
     if (!precio) return;
 
     if (this.observer) {
