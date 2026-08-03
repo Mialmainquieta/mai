@@ -36,7 +36,14 @@ MAI.modules.producto = {
         // Obtener únicamente el último precio mostrado
         // (ignorando el precio tachado)
 
-        const textoPrecio = finalPrice.lastChild.textContent.trim();
+        // Obtener únicamente el texto visible del precio final
+
+        const textoPrecio = finalPrice.childNodes[
+            finalPrice.childNodes.length - 1
+        ].nodeValue.trim();     
+
+        console.log(finalPrice.childNodes);
+        console.log(textoPrecio);
 
         const precioFinal = parseFloat(
 
