@@ -799,8 +799,8 @@ h2::after{
 }
 
 .header-menu,
-.header-menu-mobile,
-.background--primary {
+.header-menu-mobile
+ {
     z-index: 1 !important;
 }
 /* ======================
