@@ -40,9 +40,9 @@ MAI.modules.producto = {
 
         // Obtener únicamente el texto visible del precio final
 
-        const textoPrecio = finalPrice.childNodes[
+       const textoPrecio = finalPrice.childNodes[
             finalPrice.childNodes.length - 1
-        ].nodeValue.trim();     
+        ].nodeValue.trim();
 
         console.log(finalPrice.childNodes);
         console.log(textoPrecio);
@@ -57,11 +57,10 @@ MAI.modules.producto = {
         );
 
         console.log("PASO 2", precioFinal);
-
         console.log("PASO 3");
-        
-        if (isNaN(precioFinal)) return;
 
+        if (isNaN(precioFinal)) return;
+        
         const precioLista = precioFinal / (1 - (descuento / 100));
 
         const ahorro = precioLista - precioFinal;
