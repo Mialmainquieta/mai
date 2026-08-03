@@ -1675,13 +1675,13 @@ Espaciado y Tipografía
 
 .footer__top{
 
-    padding:60px 0 !important;
+    padding:20px 0 !important;
 
 }
 
 .footer__top__item{
 
-    margin-bottom:40px !important;
+    margin-bottom:14px !important;
 
 }
 
@@ -1859,5 +1859,38 @@ Sprint 3 - Tipografía
     width:20px;
 
     color:#C2A04C;
+
+}
+/*======================================================
+
+MAI Framework
+Footer Premium
+Sprint 3.1 - Compactar Footer Técnico
+
+======================================================*/
+
+.footer__top__left,
+.footer__top__right{
+
+    padding:0 25px !important;
+
+}
+
+.footer__top ul,
+.footer__top p{
+
+    margin:0 !important;
+
+}
+
+.footer__top__social-media-list{
+
+    margin-bottom:14px !important;
+
+}
+
+.footer__top__title{
+
+    margin-bottom:10px !important;
 
 }
