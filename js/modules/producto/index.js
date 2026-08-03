@@ -7,11 +7,49 @@
 
 MAI.modules.producto = {
 
+    observer: null,
+
     init() {
+
+        console.log("✅ MAI → producto.init()");
 
         this.transferencia();
 
+        this.observarPrecio();
+
     },
+
+    observarPrecio() {
+
+    const precio = document.querySelector(".product-vip__price-value");
+
+    if (!precio) return;
+
+    if (this.observer) {
+
+        this.observer.disconnect();
+
+    }
+
+    this.observer = new MutationObserver(() => {
+
+        console.log("🔄 Precio actualizado por Empretienda");
+
+        this.transferencia();
+
+    });
+
+    this.observer.observe(precio, {
+
+        childList: true,
+
+        characterData: true,
+
+        subtree: true
+
+    });
+
+},
 
     transferencia() {
 
