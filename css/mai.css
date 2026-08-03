@@ -1791,3 +1791,73 @@ Sprint 2 - Layout + Colores
 .footer{
     margin-top:120px !important;
 }
+/*======================================================
+
+MAI Framework
+Footer Premium
+Sprint 3 - Tipografía
+
+======================================================*/
+
+.footer__top h4{
+
+    font-size:15px;
+
+    font-weight:700;
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+    color:#F5F2EA;
+
+    margin-bottom:24px;
+
+    position:relative;
+
+}
+
+.footer__top h4::after{
+
+    content:"";
+
+    display:block;
+
+    width:45px;
+
+    height:2px;
+
+    margin-top:10px;
+
+    background:#C2A04C;
+
+}
+.footer__top{
+
+    font-size:15px;
+
+    line-height:1.9;
+
+}
+
+.footer__top a{
+
+    color:#EAE6DC;
+
+    transition:.25s;
+
+}
+
+.footer__top a:hover{
+
+    color:#C2A04C;
+
+}
+.footer__top .fab,
+.footer__top .fas{
+
+    width:20px;
+
+    color:#C2A04C;
+
+}
