@@ -9,8 +9,6 @@ MAI.modules.producto = {
 
     init() {
 
-        console.log("✅ MAI → producto.init()");
-
         this.transferencia();
 
     },
