@@ -11,8 +11,6 @@ MAI.modules.producto = {
 
     init() {
 
-        console.log("✅ MAI → producto.init()");
-
         this.transferencia();
 
         this.observarPrecio();
@@ -22,7 +20,7 @@ MAI.modules.producto = {
     observarPrecio() {
 
     const precio = document.querySelector(".product-vip__price");
-        console.log("Observando:", precio);
+
     if (!precio) return;
 
     if (this.observer) {
@@ -32,8 +30,6 @@ MAI.modules.producto = {
     }
 
     this.observer = new MutationObserver(() => {
-
-        console.log("🔄 Precio actualizado por Empretienda");
 
         this.transferencia();
 
@@ -52,10 +48,6 @@ MAI.modules.producto = {
 },
 
     transferencia() {
-
-        console.log("✅ MAI → transferencia()");
-        console.count("transferencia()");
-
 
         const box = document.querySelector(".product-vip__show-payment-offers-discount");
 
