@@ -33,6 +33,8 @@ MAI.modules.producto = {
 
         if (!finalPrice) return;
 
+        console.log("PASO 1");
+
         // Obtener únicamente el último precio mostrado
         // (ignorando el precio tachado)
 
@@ -54,6 +56,10 @@ MAI.modules.producto = {
 
         );
 
+        console.log("PASO 2", precioFinal);
+
+        console.log("PASO 3");
+        
         if (isNaN(precioFinal)) return;
 
         const precioLista = precioFinal / (1 - (descuento / 100));
