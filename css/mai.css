@@ -1738,3 +1738,51 @@ Espaciado y Tipografía
     transform:translateY(-2px);
 
 }
+/*======================================================
+
+MAI Framework
+Footer Premium
+Sprint 2 - Layout + Colores
+
+======================================================*/
+
+.footer{
+
+    background:#4A4A3D !important;
+
+    color:#F5F2EA;
+
+}
+
+.footer__top{
+
+    background:#4A4A3D !important;
+
+    border-top:1px solid #C2A04C;
+
+}
+
+.footer__container{
+
+    max-width:1400px !important;
+
+    width:92%;
+
+    margin:0 auto;
+
+}
+
+.footer__top__left,
+.footer__top__right{
+
+    padding:10px 25px;
+
+}
+
+.footer__bottom{
+
+    background:#3F3F34 !important;
+
+    border-top:1px solid rgba(194,160,76,.35);
+
+}
