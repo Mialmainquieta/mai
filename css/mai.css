@@ -1675,13 +1675,13 @@ Espaciado y Tipografía
 
 .footer__top{
 
-    padding:20px 0 !important;
+    padding:10px 0 !important;
 
 }
 
 .footer__top__item{
 
-    margin-bottom:14px !important;
+    margin-bottom:8px !important;
 
 }
 
@@ -1801,7 +1801,7 @@ Sprint 3 - Tipografía
 
 .footer__top h4{
 
-    font-size:15px;
+    font-size:13px;
 
     font-weight:700;
 
@@ -1811,7 +1811,7 @@ Sprint 3 - Tipografía
 
     color:#F5F2EA;
 
-    margin-bottom:24px;
+    margin-bottom:6px;
 
     position:relative;
 
@@ -1892,5 +1892,15 @@ Sprint 3.1 - Compactar Footer Técnico
 .footer__top__title{
 
     margin-bottom:10px !important;
+
+}
+.footer__top{
+
+    line-height:1.45;
+
+}
+.footer__top img{
+
+    margin-bottom:4px !important;
 
 }
