@@ -91,9 +91,16 @@ MAI.modules.producto = {
 
         if (isNaN(precioFinal)) return;
 
-        const precioLista = precioFinal / (1 - (descuento / 100));
+        // Precio publicado por Empretienda
+        const precioLista = precioFinal;
 
-        const ahorro = precioLista - precioFinal;
+        // Aplicar descuento por transferencia
+        const precioTransferencia =
+            precioLista * (1 - (descuento / 100));
+
+        // Ahorro real
+        const ahorro =
+            precioLista - precioTransferencia;
 
         const dinero = (valor) =>
 
@@ -137,7 +144,7 @@ MAI.modules.producto = {
 
                 <div class="mai-price">
 
-                    ${dinero(precioFinal)}
+                    ${dinero(precioTransferencia)}
 
                 </div>
 
