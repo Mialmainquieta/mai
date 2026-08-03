@@ -18,6 +18,8 @@ MAI.modules.producto = {
     transferencia() {
 
         console.log("✅ MAI → transferencia()");
+        console.count("transferencia()");
+
 
         const box = document.querySelector(".product-vip__show-payment-offers-discount");
 
@@ -33,8 +35,6 @@ MAI.modules.producto = {
 
         if (!finalPrice) return;
 
-        console.log("PASO 1");
-
         // Obtener únicamente el último precio mostrado
         // (ignorando el precio tachado)
 
@@ -43,9 +43,6 @@ MAI.modules.producto = {
        const textoPrecio = finalPrice.childNodes[
             finalPrice.childNodes.length - 1
         ].nodeValue.trim();
-
-        console.log(finalPrice.childNodes);
-        console.log(textoPrecio);
 
         const precioFinal = parseFloat(
 
@@ -56,11 +53,8 @@ MAI.modules.producto = {
 
         );
 
-        console.log("PASO 2", precioFinal);
-        console.log("PASO 3");
-
         if (isNaN(precioFinal)) return;
-        
+
         const precioLista = precioFinal / (1 - (descuento / 100));
 
         const ahorro = precioLista - precioFinal;
