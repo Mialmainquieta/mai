@@ -20,7 +20,6 @@ MAI.modules.layout = {
 
         if (!footerTop) return;
 
-        // Evita insertar el bloque dos veces
         if (document.querySelector(".mai-footer-header")) return;
 
         footerTop.insertAdjacentHTML(
@@ -33,13 +32,7 @@ MAI.modules.layout = {
     renderFooterHeader() {
 
         return `
-
-            <!-- MAI Footer Header -->
-
-            <div class="mai-footer-header">
-
-            </div>
-
+            <div class="mai-footer-header"></div>
         `;
 
     }
