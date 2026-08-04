@@ -1951,3 +1951,150 @@ Sprint 3.2 - Compactar altura
     margin-bottom:0 !important;
 
 }
+/*======================================================
+
+MAI Framework
+Pre Footer Premium
+Sprint 1 - Layout
+
+======================================================*/
+
+.mai-prefooter{
+
+    background:#4A4A3D;
+
+    color:#F5F2EA;
+
+    border-top:1px solid #C2A04C;
+
+    padding:70px 0;
+
+}
+
+.mai-prefooter__container{
+
+    max-width:1320px;
+
+    width:90%;
+
+    margin:0 auto;
+
+}
+
+.mai-prefooter__grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:80px;
+
+    margin-top:55px;
+
+}
+
+.mai-brand{
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+}
+
+.mai-brand__logo{
+
+    max-width:260px;
+
+    width:100%;
+
+    height:auto;
+
+}
+
+.mai-brand__claim{
+
+    margin-top:18px;
+
+    font-size:18px;
+
+    color:#DDD7CA;
+
+    letter-spacing:.05em;
+
+}
+
+.mai-column h3{
+
+    color:#F5F2EA;
+
+    font-size:18px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.18em;
+
+    margin-bottom:20px;
+
+    position:relative;
+
+}
+
+.mai-column h3::after{
+
+    content:"";
+
+    display:block;
+
+    width:45px;
+
+    height:2px;
+
+    background:#C2A04C;
+
+    margin-top:10px;
+
+}
+
+.mai-column ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+}
+
+.mai-column li{
+
+    margin-bottom:12px;
+
+}
+
+.mai-column a{
+
+    color:#DDD7CA;
+
+    text-decoration:none;
+
+    transition:.25s;
+
+}
+
+.mai-column a:hover{
+
+    color:#C2A04C;
+
+}
+
+.mai-social{
+
+    margin-top:60px;
+
+    text-align:center;
+
+    font-size:17px;
+
+    letter-spacing:.08em;
+
+}
