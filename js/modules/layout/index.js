@@ -44,7 +44,7 @@ MAI.modules.layout = {
             <div class="mai-footer-brand">
 
                 <img
-                    src="https://mialmainquieta.github.io/mai/img/logo-footer.png"
+                    src="https://mialmainquieta.github.io/mai/Img/logo-footer.png"
                     alt="Mi Alma Inquieta"
                     class="mai-footer-logo">
 
