@@ -35,27 +35,89 @@ MAI.modules.layout = {
 
     <div class="mai-footer-header">
 
-        <div class="mai-footer-brand">
+        <div class="mai-footer-grid">
 
-            <div class="mai-footer-logo">
+            <!-- ==========================================
+                            MARCA
+            =========================================== -->
 
-                Mi Alma Inquieta
+            <div class="mai-footer-brand">
+
+                <img
+                    src="https://mialmainquieta.github.io/mai/img/logo-footer.png"
+                    alt="Mi Alma Inquieta"
+                    class="mai-footer-logo">
+
+                <p class="mai-footer-claim">
+
+                    Calidez y calidad cerca tuyo.
+
+                </p>
+
+                <p class="mai-footer-description">
+
+                    Diseño artesanal<br>
+                    Deco • Textiles • Cestería
+
+                </p>
 
             </div>
 
-            <p class="mai-footer-claim">
+            <!-- ==========================================
+                            COMPRÁ
+            =========================================== -->
 
-                Calidez y calidad cerca tuyo.
+            <div class="mai-footer-column">
 
-            </p>
+                <h3>COMPRÁ</h3>
 
-            <p class="mai-footer-description">
+                <ul>
 
-            Diseño artesanal · Deco · Textiles · Cestería
+                    <li><a href="/productos">Tienda</a></li>
+                    <li><a href="/categoria/cesteria">Cestería</a></li>
+                    <li><a href="/categoria/textiles">Textiles</a></li>
+                    <li><a href="/categoria/detalles-deco">Detalles Deco</a></li>
+                    <li><a href="/categoria/mai-outfit">MAI Outfit</a></li>
 
-            </p>
+                </ul>
 
-            <div class="mai-footer-divider"></div>
+            </div>
+
+            <!-- ==========================================
+                            AYUDA
+            =========================================== -->
+
+            <div class="mai-footer-column">
+
+                <h3>AYUDA</h3>
+
+                <ul>
+
+                    <li><a href="/como-comprar">Cómo comprar</a></li>
+                    <li><a href="/cambios-y-devoluciones">Cambios y devoluciones</a></li>
+                    <li><a href="/preguntas-frecuentes">Preguntas frecuentes</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- ==========================================
+                            SEGUINOS
+            =========================================== -->
+
+            <div class="mai-footer-column">
+
+                <h3>SEGUINOS</h3>
+
+                <ul>
+
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">WhatsApp</a></li>
+                    <li><a href="#">Facebook</a></li>
+
+                </ul>
+
+            </div>
 
         </div>
 
