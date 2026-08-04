@@ -73,11 +73,17 @@ MAI.modules.layout = {
 
                 <ul>
 
-                    <li><a href="/productos">Tienda</a></li>
-                    <li><a href="/categoria/cesteria">Cestería</a></li>
-                    <li><a href="/categoria/textiles">Textiles</a></li>
-                    <li><a href="/categoria/detalles-deco">Detalles Deco</a></li>
-                    <li><a href="/categoria/mai-outfit">MAI Outfit</a></li>
+                    <li><a href="https://www.mialmainquieta.com.ar/">Tienda</a></li>
+
+                    <li><a href="https://www.mialmainquieta.com.ar/cesteria">Cestería</a></li>
+
+                    <li><a href="https://www.mialmainquieta.com.ar/textiles">Textiles</a></li>
+
+                    <li><a href="https://www.mialmainquieta.com.ar/accesorios">Detalles Deco</a></li>
+
+                    <li><a href="https://www.mialmainquieta.com.ar/mai-outfit">MAI Outfit</a></li>
+
+                    <li><a href="https://www.mialmainquieta.com.ar/combos-y-ofertas">Combos y ofertas</a></li>
 
                 </ul>
 
@@ -94,7 +100,9 @@ MAI.modules.layout = {
                 <ul>
 
                     <li><a href="/como-comprar">Cómo comprar</a></li>
-                    <li><a href="/cambios-y-devoluciones">Cambios y devoluciones</a></li>
+
+                    <li><a href="https://www.mialmainquieta.com.ar/cambios-y-devoluciones">Cambios y devoluciones</a></li>
+
                     <li><a href="/preguntas-frecuentes">Preguntas frecuentes</a></li>
 
                 </ul>
@@ -111,9 +119,23 @@ MAI.modules.layout = {
 
                 <ul>
 
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">WhatsApp</a></li>
-                    <li><a href="#">Facebook</a></li>
+                    <li>
+                        <a href="https://www.instagram.com/mialmainquieta" target="_blank">
+                            Instagram
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://api.whatsapp.com/send/?phone=5491153365338&text&type=phone_number&app_absent=0" target="_blank">
+                            WhatsApp
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Facebook
+                        </a>
+                    </li>
 
                 </ul>
 
