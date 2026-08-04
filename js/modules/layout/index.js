@@ -81,9 +81,9 @@ MAI.modules.layout = {
 
                 <ul>
 
-                    <li><a href="#">Cómo comprar</a></li>
+                    <li><a href="https://www.mialmainquieta.com.ar/como-comprar">Cómo comprar</a></li>
                     <li><a href="https://www.mialmainquieta.com.ar/cambios-y-devoluciones">Cambios y devoluciones</a></li>
-                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="https://www.mialmainquieta.com.ar/preguntas-frecuentes">Preguntas frecuentes</a></li>
 
                 </ul>
 
