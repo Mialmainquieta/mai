@@ -1909,3 +1909,45 @@ Sprint 3.1 - Compactar Footer Técnico
     padding:4px 0 !important;
 
 }
+/*======================================================
+
+MAI Framework
+Footer Premium
+Sprint 3.2 - Compactar altura
+
+======================================================*/
+
+.footer__top{
+
+    min-height:auto !important;
+
+    height:auto !important;
+
+    padding-top:8px !important;
+
+    padding-bottom:4px !important;
+
+}
+
+.footer__container{
+
+    padding-top:0 !important;
+
+    padding-bottom:0 !important;
+
+}
+
+.footer__top__left,
+.footer__top__right{
+
+    margin-bottom:0 !important;
+
+    padding-bottom:0 !important;
+
+}
+
+.footer__top__item:last-child{
+
+    margin-bottom:0 !important;
+
+}
