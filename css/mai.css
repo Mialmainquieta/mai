@@ -2246,3 +2246,146 @@ Reset interno
     text-decoration:none;
 
 }
+/*======================================================
+
+MAI Framework
+MAI Brand Footer
+
+BLOQUE 2
+Marca + Tipografía
+
+======================================================*/
+
+/*==================================
+Columna Marca
+==================================*/
+
+.mai-footer-brand{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    justify-content:flex-start;
+
+}
+
+.mai-footer-brand__logo{
+
+    max-width:220px;
+
+    width:100%;
+
+    height:auto;
+
+    margin-bottom:22px;
+
+}
+
+.mai-footer-brand__claim{
+
+    font-size:18px;
+
+    font-weight:600;
+
+    line-height:1.6;
+
+    color:#F7F4ED;
+
+    margin-bottom:18px;
+
+}
+
+/* Línea dorada */
+
+.mai-footer-brand__claim::after{
+
+    content:"";
+
+    display:block;
+
+    width:70px;
+
+    height:2px;
+
+    margin-top:16px;
+
+    background:#C2A04C;
+
+    border-radius:20px;
+
+}
+
+.mai-footer-brand__subtitle{
+
+    font-size:15px;
+
+    line-height:1.9;
+
+    color:#DDD6C7;
+
+}
+
+/*==================================
+Columnas
+==================================*/
+
+.mai-footer-column h3{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#C2A04C;
+
+    margin-bottom:24px;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+}
+
+.mai-footer-column ul li{
+
+    margin-bottom:12px;
+
+}
+
+.mai-footer-column a{
+
+    color:#F2EFE8;
+
+    font-size:16px;
+
+    transition:.25s ease;
+
+    line-height:1.7;
+
+}
+
+.mai-footer-column a:hover{
+
+    color:#C2A04C;
+
+    padding-left:6px;
+
+}
+
+/*==================================
+Redes
+==================================*/
+
+.mai-footer-column i{
+
+    width:22px;
+
+    color:#C2A04C;
+
+    margin-right:8px;
+
+    text-align:center;
+
+}
