@@ -2179,23 +2179,34 @@ Footer Header V1
 .mai-footer-header{
 
     width:100%;
+    max-width:1200px;
     margin:0 auto 40px;
-    padding:0 20px;
+    padding:0 40px;
+    box-sizing:border-box;
 
 }
 
 .mai-footer-grid{
 
     display:grid;
-    grid-template-columns:1.6fr 1fr 1fr 1fr;
-    gap:60px;
-    align-items:flex-start;
+    grid-template-columns:320px 180px 180px 180px;
+    justify-content:center;
+    column-gap:70px;
+    align-items:start;
 
 }
 
 .mai-footer-brand{
 
     text-align:left;
+
+}
+
+.mai-footer-column{
+
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
 
 }
 
