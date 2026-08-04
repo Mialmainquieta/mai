@@ -53,7 +53,6 @@ MAI.modules.layout = {
                 </p>
 
                 <p class="mai-footer-description">
-                    Diseño artesanal<br>
                     Deco • Textiles • Cestería
                 </p>
 

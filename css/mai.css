@@ -2000,7 +2000,7 @@ Sprint 4
     width:155px;
     height:auto;
     display:block;
-    margin-bottom:18px;
+    margin-bottom:10px;
 
 }
 
@@ -2009,7 +2009,7 @@ Sprint 4
     color:#FFFFFF;
     font-size:15px;
     font-weight:600;
-    margin:0 0 12px;
+    margin:0 0 6px;
 
 }
 
@@ -2017,7 +2017,7 @@ Sprint 4
 
     color:#E0DDD5;
     font-size:14px;
-    line-height:1.75;
+    line-height:1.45;
     margin:0;
 
 }
@@ -2040,7 +2040,7 @@ Sprint 4
     font-weight:700;
     letter-spacing:.18em;
     text-transform:uppercase;
-    margin:0 0 18px;
+    margin:0 0 12px;
 
 }
 
@@ -2054,7 +2054,7 @@ Sprint 4
 
 .mai-footer-column li{
 
-    margin-bottom:10px;
+    margin-bottom:6px;
 
 }
 
@@ -2077,6 +2077,7 @@ Sprint 4
 
 .footer__top{
 
-    padding-bottom:4px !important;
+    padding:8px 0 2px !important;
+
 
 }
