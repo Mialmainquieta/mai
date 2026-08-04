@@ -2180,8 +2180,8 @@ Footer Header V1
 
     width:100%;
     max-width:900px;
-    margin:0 auto 35px;
-    padding:10px 20px 0;
+    margin:0 auto 20px;
+    padding:16px 20px 0;
     text-align:center;
 
 }
@@ -2256,5 +2256,14 @@ Footer Header V1
     letter-spacing:2px;
     text-transform:uppercase;
     margin:0;
+
+}
+.mai-footer-divider{
+
+    width:140px;
+    height:1px;
+    background:#C2A04C;
+    opacity:.65;
+    margin:28px auto 0;
 
 }
