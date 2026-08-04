@@ -17,15 +17,25 @@ MAI.init = function () {
     MAI.logger.info("Logger ............. OK");
     MAI.logger.info("Config ............. OK");
 
-    // ==========================
-    // Inicializar módulos
+   // ==========================
+    // Layout
     // ==========================
 
-    if (MAI.modules.producto) {
+    if (MAI.modules.layout) {
 
-        MAI.modules.producto.init();
+        MAI.modules.layout.init();
 
     }
+
+    // ==========================
+    // Producto
+    // ==========================
+
+if (MAI.modules.producto) {
+
+    MAI.modules.producto.init();
+
+}
 
     MAI.logger.info("Framework iniciado correctamente.");
 
