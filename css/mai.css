@@ -1954,117 +1954,92 @@ Sprint 3.2 - Compactar altura
 /*======================================================
 
 MAI Framework
-Brand Footer V2
-Versión 1.0
+Footer Header V2
+Sprint 4
 
 ======================================================*/
-
-/*======================================
-CONTENEDOR
-======================================*/
 
 .mai-footer-header{
 
     width:100%;
-    max-width:1150px;
-    margin:0 auto 40px;
-    padding:10px 20px 0;
-    box-sizing:border-box;
+    max-width:1200px;
+    margin:0 auto 10px;
+    padding:20px 10px 8px;
 
 }
-
-/*======================================
-GRID
-======================================*/
 
 .mai-footer-grid{
 
     display:grid;
-
-    grid-template-columns:32% 22% 22% 24%;
-
-    column-gap:40px;
-
-    align-items:flex-start;
+    grid-template-columns:340px 250px 250px;
+    justify-content:center;
+    column-gap:80px;
+    align-items:center;
 
 }
-
-/*======================================
-MARCA
-======================================*/
 
 .mai-footer-brand{
 
     display:flex;
-
     flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    min-height:260px;
 
-    align-items:flex-start;
+}
+
+.mai-footer-logo-link{
+
+    display:inline-block;
 
 }
 
 .mai-footer-logo{
 
-    width:170px;
-
-    max-width:100%;
-
-    margin-bottom:20px;
+    width:155px;
+    height:auto;
+    display:block;
+    margin-bottom:18px;
 
 }
 
 .mai-footer-claim{
 
     color:#FFFFFF;
-
-    font-size:16px;
-
-    font-weight:500;
-
-    line-height:1.45;
-
-    margin:0 0 14px;
+    font-size:15px;
+    font-weight:600;
+    margin:0 0 12px;
 
 }
 
 .mai-footer-description{
 
-    color:#D8D8D8;
-
-    font-size:13px;
-
-    line-height:1.70;
-
+    color:#E0DDD5;
+    font-size:14px;
+    line-height:1.75;
     margin:0;
 
 }
 
-/*======================================
-COLUMNAS
-======================================*/
-
 .mai-footer-column{
 
     display:flex;
-
     flex-direction:column;
-
-    align-items:flex-start;
+    justify-content:flex-start;
+    min-height:220px;
+    padding-left:35px;
+    border-left:1px solid rgba(194,160,76,.25);
 
 }
 
 .mai-footer-column h3{
 
     color:#C2A04C;
-
     font-size:15px;
-
     font-weight:700;
-
-    letter-spacing:.15em;
-
+    letter-spacing:.18em;
     text-transform:uppercase;
-
     margin:0 0 18px;
 
 }
@@ -2072,55 +2047,36 @@ COLUMNAS
 .mai-footer-column ul{
 
     list-style:none;
-
     padding:0;
-
     margin:0;
 
 }
 
 .mai-footer-column li{
 
-    margin-bottom:6px;
+    margin-bottom:10px;
 
 }
 
 .mai-footer-column a{
 
     color:#F5F2EA;
-
-    font-size:14px;
-
     text-decoration:none;
-
-    transition:.25s;
+    transition:all .25s ease;
 
 }
 
 .mai-footer-column a:hover{
 
     color:#C2A04C;
+    padding-left:5px;
 
 }
 
-/*======================================
-SEPARADORES
-======================================*/
+/* Reduce la separación con el footer técnico */
 
-.mai-footer-brand{
+.footer__top{
 
-    padding-right:28px;
-
-    border-right:1px solid rgba(194,160,76,.18);
-
-}
-
-.mai-footer-column:nth-child(2),
-
-.mai-footer-column:nth-child(3){
-
-    padding-right:24px;
-
-    border-right:1px solid rgba(194,160,76,.18);
+    padding-bottom:4px !important;
 
 }
