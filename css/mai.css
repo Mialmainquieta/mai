@@ -2135,3 +2135,57 @@ Sprint 6.1
     }
 
 }
+
+/*======================================================
+
+MAI Framework
+Brand Footer Responsive
+Sprint 6.1
+
+======================================================*/
+
+@media screen and (max-width:768px){
+
+    .mai-footer-grid{
+
+        display:grid;
+        grid-template-columns:1fr !important;
+        row-gap:28px;
+        justify-items:center;
+
+    }
+
+    .mai-footer-brand{
+
+        min-height:auto;
+        width:100%;
+        text-align:center;
+
+    }
+
+    .mai-footer-column{
+
+        width:100%;
+        max-width:320px;
+
+        min-height:auto;
+
+        border-left:none;
+        border-top:1px solid rgba(194,160,76,.25);
+
+        padding:22px 0 0;
+
+        align-items:center;
+        text-align:center;
+
+    }
+
+    .mai-footer-column ul{
+
+        width:100%;
+        padding:0;
+        margin:0;
+
+    }
+
+}
