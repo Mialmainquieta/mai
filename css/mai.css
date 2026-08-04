@@ -2168,3 +2168,69 @@ Integración Footer
     margin-top:0 !important;
 
 }
+
+/*======================================================
+
+MAI Framework
+Footer Header V1
+
+======================================================*/
+
+.mai-footer-header{
+
+    width:100%;
+    margin:0 auto 40px;
+    padding:0 20px;
+
+}
+
+.mai-footer-grid{
+
+    display:grid;
+    grid-template-columns:1.6fr 1fr 1fr 1fr;
+    gap:60px;
+    align-items:flex-start;
+
+}
+
+.mai-footer-brand{
+
+    text-align:left;
+
+}
+
+.mai-footer-title{
+
+    font-size:28px;
+    font-weight:700;
+    color:#C2A04C;
+    margin:0 0 12px;
+
+}
+
+.mai-footer-claim{
+
+    color:#FFFFFF;
+    font-size:15px;
+    margin:0 0 6px;
+
+}
+
+.mai-footer-description{
+
+    color:#D8D8D8;
+    font-size:13px;
+    line-height:1.6;
+    margin:0;
+
+}
+
+.mai-footer-column h3{
+
+    color:#C2A04C;
+    font-size:16px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin:0;
+
+}
