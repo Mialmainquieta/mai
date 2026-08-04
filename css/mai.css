@@ -1954,128 +1954,122 @@ Sprint 3.2 - Compactar altura
 /*======================================================
 
 MAI Framework
-Pre Footer Premium
-Versión 2.0
+Brand Footer V2
+Versión 1.0
 
 ======================================================*/
 
-.mai-prefooter{
+/*======================================
+CONTENEDOR
+======================================*/
 
-    background:#4A4A3D;
+.mai-footer-header{
 
-    color:#F5F2EA;
-
-    border-top:1px solid rgba(194,160,76,.35);
-
-    border-bottom:1px solid rgba(194,160,76,.35);
-
-    padding:70px 0 45px;
-
-}
-
-.mai-prefooter__container{
-
-    width:min(1180px,92%);
-
-    margin:auto;
+    width:100%;
+    max-width:1150px;
+    margin:0 auto 40px;
+    padding:10px 20px 0;
+    box-sizing:border-box;
 
 }
 
-/*==================================
-MARCA
-==================================*/
+/*======================================
+GRID
+======================================*/
 
-.mai-brand{
-
-    text-align:center;
-
-    margin-bottom:55px;
-
-}
-
-.mai-brand__logo{
-
-    width:220px;
-
-    max-width:100%;
-
-    display:block;
-
-    margin:0 auto 18px;
-
-}
-
-.mai-brand__title{
-
-    color:#C2A04C;
-
-    font-size:38px;
-
-    font-family:Georgia,serif;
-
-    font-weight:400;
-
-    margin:0;
-
-    letter-spacing:.03em;
-
-}
-
-.mai-brand__claim{
-
-    margin:16px 0 8px;
-
-    font-size:18px;
-
-    color:#F5F2EA;
-
-}
-
-.mai-brand__subtitle{
-
-    font-size:14px;
-
-    color:#CFC8B8;
-
-    letter-spacing:.08em;
-
-}
-
-/*==================================
-COLUMNAS
-==================================*/
-
-.mai-links{
+.mai-footer-grid{
 
     display:grid;
 
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:32% 22% 22% 24%;
 
-    gap:140px;
+    column-gap:40px;
 
-    justify-content:center;
-
-    max-width:700px;
-
-    margin:0 auto;
+    align-items:flex-start;
 
 }
 
-.mai-column h3{
+/*======================================
+MARCA
+======================================*/
 
-    color:#F5F2EA;
+.mai-footer-brand{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+.mai-footer-logo{
+
+    width:170px;
+
+    max-width:100%;
+
+    margin-bottom:20px;
+
+}
+
+.mai-footer-claim{
+
+    color:#FFFFFF;
 
     font-size:16px;
 
-    text-transform:uppercase;
+    font-weight:500;
 
-    letter-spacing:.20em;
+    line-height:1.45;
 
-    margin-bottom:18px;
+    margin:0 0 14px;
 
 }
 
-.mai-column ul{
+.mai-footer-description{
+
+    color:#D8D8D8;
+
+    font-size:13px;
+
+    line-height:1.70;
+
+    margin:0;
+
+}
+
+/*======================================
+COLUMNAS
+======================================*/
+
+.mai-footer-column{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+.mai-footer-column h3{
+
+    color:#C2A04C;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    letter-spacing:.15em;
+
+    text-transform:uppercase;
+
+    margin:0 0 18px;
+
+}
+
+.mai-footer-column ul{
 
     list-style:none;
 
@@ -2085,15 +2079,17 @@ COLUMNAS
 
 }
 
-.mai-column li{
+.mai-footer-column li{
 
-    margin-bottom:10px;
+    margin-bottom:6px;
 
 }
 
-.mai-column a{
+.mai-footer-column a{
 
-    color:#DDD7CA;
+    color:#F5F2EA;
+
+    font-size:14px;
 
     text-decoration:none;
 
@@ -2101,169 +2097,30 @@ COLUMNAS
 
 }
 
-.mai-column a:hover{
-
-    color:#C2A04C;
-
-    padding-left:6px;
-
-}
-
-/*==================================
-REDES
-==================================*/
-
-.mai-social{
-
-    margin-top:55px;
-
-    text-align:center;
-
-    font-size:16px;
-
-}
-
-.mai-social a{
-
-    color:#F5F2EA;
-
-    text-decoration:none;
-
-    margin:0 10px;
-
-}
-
-.mai-social a:hover{
+.mai-footer-column a:hover{
 
     color:#C2A04C;
 
 }
 
-.mai-social span{
-
-    color:#8E8A79;
-
-}
-/*======================================================
-
-MAI Framework
-Integración Footer
-
-======================================================*/
-
-.mai-prefooter + .footer{
-
-    margin-top:0 !important;
-
-}
-
-.mai-prefooter{
-
-    margin-bottom:0 !important;
-
-}
-
-.footer{
-
-    margin-top:0 !important;
-
-}
-
-/*======================================================
-
-MAI Framework
-Footer Header V1
-
-======================================================*/
-
-.mai-footer-header{
-
-    width:100%;
-    max-width:900px;
-    margin:0 auto 20px;
-    padding:16px 20px 0;
-    text-align:center;
-
-}
-
-.mai-footer-grid{
-
-    display:grid;
-    grid-template-columns:380px 180px 180px 180px;
-    justify-content:space-between;
-    align-items:start;
-    gap:50px;
-
-}
+/*======================================
+SEPARADORES
+======================================*/
 
 .mai-footer-brand{
 
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
+    padding-right:28px;
+
+    border-right:1px solid rgba(194,160,76,.18);
 
 }
 
-.mai-footer-logo{
+.mai-footer-column:nth-child(2),
 
-    font-size:28px;
-    font-weight:700;
-    color:#C2A04C;
-    letter-spacing:1px;
-    margin-bottom:14px;
+.mai-footer-column:nth-child(3){
 
-}
+    padding-right:24px;
 
-.mai-footer-column{
-
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-
-}
-
-.mai-footer-title{
-
-     font-size:18px;
-    font-weight:700;
-    color:#C2A04C;
-    margin:0 0 12px;
-
-}
-
-.mai-footer-claim{
-
-    color:#FFFFFF;
-    font-size:16px;
-    margin:0 0 8px;
-
-}
-
-.mai-footer-description{
-
-    color:#D8D8D8;
-    font-size:14px;
-    line-height:1.7;
-    margin:0;
-
-}
-
-.mai-footer-column h3{
-
-    color:#C2A04C;
-    font-size:16px;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    margin:0;
-
-}
-.mai-footer-divider{
-
-    width:140px;
-    height:1px;
-    background:#C2A04C;
-    opacity:.65;
-    margin:28px auto 0;
+    border-right:1px solid rgba(194,160,76,.18);
 
 }
