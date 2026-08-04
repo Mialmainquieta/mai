@@ -35,41 +35,25 @@ MAI.modules.layout = {
 
     <div class="mai-footer-header">
 
-        <div class="mai-footer-grid">
+        <div class="mai-footer-brand">
 
-            <div class="mai-footer-brand">
+            <div class="mai-footer-logo">
 
-                <h2 class="mai-footer-title">
-                    Mi Alma Inquieta
-                </h2>
-
-                <p class="mai-footer-claim">
-                    Calidez y calidad cerca tuyo.
-                </p>
-
-                <p class="mai-footer-description">
-                    Diseño artesanal · Deco · Textiles · Cestería
-                </p>
+                Mi Alma Inquieta
 
             </div>
 
-            <div class="mai-footer-column">
+            <p class="mai-footer-claim">
 
-                <h3>Comprá</h3>
+                Calidez y calidad cerca tuyo.
 
-            </div>
+            </p>
 
-            <div class="mai-footer-column">
+            <p class="mai-footer-description">
 
-                <h3>Ayuda</h3>
+                Diseño artesanal · Deco · Textiles · Cestería
 
-            </div>
-
-            <div class="mai-footer-column">
-
-                <h3>Seguinos</h3>
-
-            </div>
+            </p>
 
         </div>
 

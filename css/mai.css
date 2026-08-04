@@ -2179,10 +2179,10 @@ Footer Header V1
 .mai-footer-header{
 
     width:100%;
-    max-width:1200px;
-    margin:0 auto 40px;
-    padding:0 40px;
-    box-sizing:border-box;
+    max-width:900px;
+    margin:0 auto 35px;
+    padding:10px 20px 0;
+    text-align:center;
 
 }
 
@@ -2198,8 +2198,20 @@ Footer Header V1
 
 .mai-footer-brand{
 
-    text-align:left;
-    max-width:380px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+}
+
+.mai-footer-logo{
+
+    font-size:28px;
+    font-weight:700;
+    color:#C2A04C;
+    letter-spacing:1px;
+    margin-bottom:14px;
 
 }
 
@@ -2223,16 +2235,16 @@ Footer Header V1
 .mai-footer-claim{
 
     color:#FFFFFF;
-    font-size:15px;
-    margin:0 0 6px;
+    font-size:16px;
+    margin:0 0 8px;
 
 }
 
 .mai-footer-description{
 
     color:#D8D8D8;
-    font-size:13px;
-    line-height:1.6;
+    font-size:14px;
+    line-height:1.7;
     margin:0;
 
 }
