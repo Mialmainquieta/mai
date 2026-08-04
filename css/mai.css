@@ -2168,3 +2168,81 @@ Integración Footer
     margin-top:0 !important;
 
 }
+/*======================================================
+
+MAI Framework
+MAI Brand Footer
+V1.0
+
+BLOQUE 1
+Layout
+
+======================================================*/
+
+.mai-brand-footer{
+
+    background:#4A4A3D;
+
+    color:#F5F2EA;
+
+    border-top:1px solid rgba(194,160,76,.35);
+
+    border-bottom:1px solid rgba(194,160,76,.20);
+
+    margin:0;
+
+    padding:55px 0;
+
+}
+
+.mai-brand-footer__container{
+
+    width:min(1320px,92%);
+
+    margin:0 auto;
+
+}
+
+.mai-brand-footer__grid{
+
+    display:grid;
+
+    grid-template-columns:1.35fr 1fr 1fr .9fr;
+
+    column-gap:60px;
+
+    align-items:start;
+
+}
+
+/*==================================
+Reset interno
+==================================*/
+
+.mai-brand-footer *{
+
+    box-sizing:border-box;
+
+}
+
+.mai-brand-footer ul{
+
+    margin:0;
+
+    padding:0;
+
+    list-style:none;
+
+}
+
+.mai-brand-footer p{
+
+    margin:0;
+
+}
+
+.mai-brand-footer a{
+
+    text-decoration:none;
+
+}
