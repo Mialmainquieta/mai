@@ -1974,7 +1974,7 @@ Sprint 4
     grid-template-columns:340px 250px 250px;
     justify-content:center;
     column-gap:80px;
-    align-items:center;
+    align-items:start;
 
 }
 
@@ -2079,5 +2079,59 @@ Sprint 4
 
     padding:8px 0 2px !important;
 
+
+}
+
+/*======================================================
+
+MAI Framework
+Brand Footer Responsive
+Sprint 6.1
+
+======================================================*/
+
+@media (max-width:768px){
+
+    .mai-footer-grid{
+
+        grid-template-columns:1fr;
+        row-gap:35px;
+        justify-items:center;
+
+    }
+
+    .mai-footer-brand{
+
+        min-height:auto;
+        padding-bottom:10px;
+
+    }
+
+    .mai-footer-column{
+
+        width:100%;
+        max-width:320px;
+        min-height:auto;
+
+        border-left:none;
+        border-top:1px solid rgba(194,160,76,.25);
+
+        padding:22px 0 0;
+        text-align:center;
+        align-items:center;
+
+    }
+
+    .mai-footer-column ul{
+
+        width:100%;
+
+    }
+
+    .mai-footer-column li{
+
+        margin-bottom:10px;
+
+    }
 
 }
