@@ -2189,16 +2189,17 @@ Footer Header V1
 .mai-footer-grid{
 
     display:grid;
-    grid-template-columns:320px 180px 180px 180px;
-    justify-content:center;
-    column-gap:70px;
+    grid-template-columns:380px 180px 180px 180px;
+    justify-content:space-between;
     align-items:start;
+    gap:50px;
 
 }
 
 .mai-footer-brand{
 
     text-align:left;
+    max-width:380px;
 
 }
 
@@ -2212,7 +2213,7 @@ Footer Header V1
 
 .mai-footer-title{
 
-    font-size:28px;
+     font-size:18px;
     font-weight:700;
     color:#C2A04C;
     margin:0 0 12px;
